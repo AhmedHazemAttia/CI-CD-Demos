@@ -1,0 +1,6 @@
+on: push
+jobs:
+  first_stage:
+    runs-on: windows-latest
+    steps:
+      - run: mvn -v
