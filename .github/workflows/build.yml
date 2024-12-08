@@ -7,12 +7,11 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Download and Install Java 17
-        run: |
-          curl -Lo openjdk-17.zip https://github.com/adoptium/temurin17-binaries/releases/latest/download/OpenJDK17U-jdk_x64_windows_hotspot.zip
-          powershell Expand-Archive -Path openjdk-17.zip -DestinationPath java-17
-          echo "JAVA_HOME=$PWD/java-17" >> $GITHUB_ENV
-          echo "$JAVA_HOME/bin" >> $GITHUB_PATH
+      - name: Setup Java JDK
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' 
+          java-version: '17'     
 
       - name: Verify Java Installation
         run: java -version
