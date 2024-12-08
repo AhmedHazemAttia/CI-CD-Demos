@@ -7,11 +7,11 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Setting up Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adoptium'
+      # - name: Setting up Java
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     java-version: '17'
+      #     distribution: 'adoptium'
 
       - name: Check Maven and Java versions
         run: |
