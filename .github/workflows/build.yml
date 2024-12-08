@@ -10,8 +10,7 @@ jobs:
       - name: Download and Install Java 17
         run: |
           curl -Lo openjdk-17.zip https://github.com/adoptium/temurin17-binaries/releases/latest/download/OpenJDK17U-jdk_x64_windows_hotspot.zip
-          mkdir java-17
-          tar -xf openjdk-17.zip -C java-17 --strip-components=1
+          powershell Expand-Archive -Path openjdk-17.zip -DestinationPath java-17
           echo "JAVA_HOME=$PWD/java-17" >> $GITHUB_ENV
           echo "$JAVA_HOME/bin" >> $GITHUB_PATH
 
