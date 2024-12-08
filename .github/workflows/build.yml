@@ -14,6 +14,6 @@ jobs:
 #        with:
 #          maven-version: '3.9.9'
 
-      - name: checking Maven
-        run: mvn -v
+      - name: runing Maven unit tests
+        run: mvn test
         
