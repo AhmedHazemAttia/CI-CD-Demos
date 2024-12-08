@@ -16,6 +16,7 @@ jobs:
 
       - name: Install dependencies and run tests
         run: mvn test
+        working-directory: ${{ github.workspace }}
 
       - name: Push changes (if tests pass)
         if: success()
