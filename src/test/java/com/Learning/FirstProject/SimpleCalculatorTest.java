@@ -9,7 +9,7 @@ class SimpleCalculatorTest {
     @Test
     void addingTwoNumbers(){
         var simpleCalc = new SimpleCalculator();
-        assertEquals(8, simpleCalc.add(4,4));
+        assertEquals(10, simpleCalc.add(8,2));
     }
 
 }
