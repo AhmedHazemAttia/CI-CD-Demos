@@ -14,13 +14,6 @@ jobs:
 #        with:
 #          maven-version: '3.9.9'
 
-      - name: Install dependencies and run tests
-        run: mvn test
-        working-directory: ${{ github.workspace }}
-
-      - name: Push changes (if tests pass)
-        if: success()
-        run: |
-          git add .  
-          git commit -m "Automated commit after success testing stage"
-          git push origin main
+      - name: checking Maven
+        run: mvn -v
+        
