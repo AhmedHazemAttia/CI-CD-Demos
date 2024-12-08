@@ -14,6 +14,6 @@ jobs:
 #        with:
 #          maven-version: '3.9.9'
 
-      - name: runing Maven unit tests
-        run: mvn test
+      - name: git branch check
+        run: git branch
         
