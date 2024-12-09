@@ -16,5 +16,6 @@ jobs:
       - name: Verify Java Installation
         run: java -version
 
-      - name: Install dependencies and run tests
-        run: mvn test
+  #no need now, because i am running local DB so it won't pass this on the pipeline
+#      - name: Install dependencies and run tests
+#        run: mvn test
