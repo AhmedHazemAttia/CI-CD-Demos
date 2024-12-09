@@ -1,8 +1,6 @@
 package com.Learning.FirstProject.domain.Entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +16,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Students {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", updatable = false, nullable = false, unique = true)
     private Long id;
     @Column(name="name", nullable = false)
