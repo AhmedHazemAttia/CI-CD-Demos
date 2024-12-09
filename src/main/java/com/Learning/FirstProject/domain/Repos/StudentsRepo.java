@@ -1,4 +1,8 @@
 package com.Learning.FirstProject.domain.Repos;
 
-public interface StudentsRepo {
+import com.Learning.FirstProject.domain.Entity.Students;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StudentsRepo extends JpaRepository<Students, Long> {
+    Students findById(Students studentId);
 }
